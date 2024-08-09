@@ -1,0 +1,87 @@
+<!--Contact Page Design-->
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+    {% load static %} 
+
+
+
+    <!-- banner Section start -->
+    <section class="banner_section">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+    </section>
+    <!-- banner section exit -->
+
+    <!--Contact Section Start-->
+    <section class="contact_section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center pb-5">
+                    <h2 class="section-title">Get In Touch</h2>
+                </div>
+                <div class="col-12 contact-form">
+                    <div class="row">
+                        <div class="col-lg-7 mb-5">
+                            <form class="row g-3" action="/contact/" method="post">
+                                {% csrf_token %}
+                                <div class="col-md-6 mb-4">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name *" required="">
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="name">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email *" required="">
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="name">Address</label>
+                                    <input type="text" class="form-control" name="address" id="address" placeholder="Your Address *" required="">
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="name">Phone no.</label>
+                                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone *" required="">
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label for="desc">How May We Help You ?</label>
+                                    <input type="text" class="form-control" id="msg" name="msg" placeholder="your Message">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn main-btn">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-5 mb-5">
+                            <div class="content-box ms-sm-5">
+                                <ul class="info-box clearfix">
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <p>Any Questions? Call us</p>
+                                        <div>
+                                            <a href="#">+91 888-2970-612</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-envelope-open"></i>
+                                        <p>Any Questions? Email us</p>
+                                        <div>
+                                            <a href="#">naveen88cm@gmail.com</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Contact Section Exit -->
+
+{% endblock %}

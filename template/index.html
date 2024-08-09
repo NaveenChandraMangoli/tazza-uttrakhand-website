@@ -1,0 +1,373 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+    {% load static %}    
+
+    <!-- banner Section start -->
+    <section class="banner_section">
+        <div class="container">
+            <div id="banner-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption">
+                            <div class="banner-content">
+                                <h1>100% Organic</h1>
+                                <h3>Fresh & Natural Farm Food</h3>
+                                <p>"Fresh, Organic, and Direct from Farmers: Tazza Uttarakhand Store"</p>
+                                <a href="product.html" class="btn main-btn">ALL PRoducts</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <div class="banner-content">
+                                <h1>100% Organic</h1>
+                                <h3>Fresh & Natural Farm Food</h3>
+                                <p>"Savor the Best of Uttarakhand: Organic Fruits, Vegetables, Dals, and Juices"</p>
+                                <a href="product.html" class="btn main-btn">ALL PRoducts</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner section exit -->
+
+    <!-- Features Section start -->
+    <section class="feature_section">
+        <div class="container">
+            <div class="row">
+                    <div class="row justify-content-center">
+                        <div class="col-12 text-center pb-5">
+                            <h2 class="section-title">Our Services</h2>
+                        </div>
+                    </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <img decoding="async" src="{% static  './images/feature-icon/ui-chat.svg'  %}">
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>24/07 Support</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <img decoding="async" src="{% static  './images/feature-icon/truck-loaded.svg'  %}">
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Free Shipping</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <img decoding="async" src="{% static  './images/feature-icon/wheat.svg'  %}">
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>Fresh & Healthy</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 mb-5">
+                    <div class="card features-box">
+                        <div class="text-center">
+                            <div class="features-icon-border">
+                                <div class="features-icon">
+                                    <img decoding="async" src="{% static  './images/feature-icon/lemon.svg'  %}">
+                                </div>
+                            </div>
+                            <div class="features-text">
+                                <h3>From our farm</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section Exit -->
+
+    <!--About Section start -->
+    <section class="landing_about_section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center pb-5">
+                    <h2 class="section-title">About us</h2>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-6 col-sm-8">
+                    <div class="about-content">
+                        <h2>" We Providing Freshness and Flavor of Uttarakhand's Organic Products "</h2>
+                        <div class="about-details">
+                            <p class="fw-bold">Welcome to Tazza Uttarakhand Store, your one-stop shop for the freshest and finest organic produce from the heart of Uttarakhand. We take immense pride in offering a wide range of vegetables, fruits, dals, and juices, all sourced directly from local farmers who are committed to sustainable and eco-friendly farming practices.</p>
+                            <p><b class="text-success">Organic and Fresh:</b> All our products are 100% organic and come directly from farmers, ensuring freshness and quality.
+                                <br>
+                                <b class="text-success">Support Local Farmers:</b> By shopping with us, you support Uttarakhand’s farmers and contribute to sustainable agriculture.
+                                <br>
+                                <b class="text-success">Health and Wellness:</b> Our organic produce is free from chemicals and pesticides, promoting a healthier lifestyle for you and your family.</p>
+                            <a href="about.html" class="btn main-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About Section Exit -->
+
+    <!--Product Section start -->
+    <section class="landing_product_section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center pb-5">
+                    <h2 class="section-title">Our Best Seller Product</h2>
+                    <p class="section-subtitle text-success">Click to view the full detail of product</p>
+                </div>
+            </div>
+
+            <div class="row mb-4 justify-content-center">
+                <div  class="col-lg-4 col-8 col-md-4">
+                    <form method="get" class=" d-flex">
+                        <input class="form-control me-2" type="search" name="search_item" placeholder="Search product items....." aria-label="Search">
+                        <input class="btn btn-outline-success fs-3" type="submit" value="Search" />
+                    </form>
+                </div>
+            </div>
+
+            <div class="row mx-0">
+
+                {% for n in Addproducts %}
+
+                    <div class="col-6 col-lg-3 mb-5">
+                        <div class="card product-card">
+                            <div class="product-img">
+                                <img decoding="async" src="/media/{{n.image}}" class="img-fluid" />
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p><b>{{n.product_name}}</b></p>
+                                <span>Rs. {{n.price}}</span>
+                            </div>
+                            <div class="product-detail">
+                                <a href="/product/{{n.id}}" class="btn main-btn"><i class="fa fa-eye text-dark me-1" aria-hidden="true"></i>View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% empty %}
+
+                    <!--empty is work as a else when if condition is false then print empty -->
+
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 text-center pb-5">
+                                <h3 class="section-title text-danger">No Product Found</h3>
+                                <p class="section-subtitle text-success">Soory this product not present search another product again</p>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+
+
+
+                <!--<div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="card product-card">
+                        <div class="product-img">
+                            <img decoding="async" src="{% static  './images/products/product-2.jpg'  %}" class="img-fluid" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3>Orange</h3>
+                            <span>$70 KG</span>
+                        </div>
+                        <div class="product-detail">
+                            <a href="/product/" class="btn main-btn">View PRoducts</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="card product-card">
+                        <div class="product-img">
+                            <img decoding="async" src="{% static  './images/products/product-3.jpg'  %}" class="img-fluid" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3>Apple</h3>
+                            <span>$70 KG</span>
+                        </div>
+                        <div class="product-detail">
+                            <a href="/product/" class="btn main-btn">View PRoducts</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="card product-card">
+                        <div class="product-img">
+                            <img decoding="async" src="{% static  './images/products/product-4.jpg'  %}" class="img-fluid" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3>Dragon</h3>
+                            <span>$70 KG</span>
+                        </div>
+                        <div class="product-detail">
+                            <a href="/product/" class="btn main-btn">View PRoducts</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+    </section>
+    <!--Product Section Exit -->
+
+    <!-- testimonial Section start -->
+    <section class="testimonial_section">
+        <div class="container">
+            <div class="row pb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Our Happy Customers</h2>
+                    <p class="section-subtitle text-success">These are the reviews given by our customers </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-md-10">
+                    <div id="testimonial-slider" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button data-bs-target="#testimonial-slider" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button data-bs-target="#testimonial-slider" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button data-bs-target="#testimonial-slider" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="d-sm-flex row">
+                                    <div class="profile-box col-sm-5">
+                                        <img decoding="async" src="{% static  './images/testimonial/testimonial-1.png'  %}" class="img-fluid">
+                                    </div>
+                                    <div class="card  col-sm-7">
+                                        <div class="desc-box">
+                                            <p class="fst-italic">"Tazza Uttarakhand Store offers the freshest organic produce I've ever tasted! Supporting local farmers has never been easier."</p>
+                                            <div class="my-4">
+                                                <h4>Udant Shah</h4>
+                                                <p class="m-0 text-white">Happy Customers</p>
+                                            </div>
+                                            <img decoding="async" src="{% static  './images/testimonial/qoutes.svg'  %}" class="float-end">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-sm-flex row">
+                                    <div class="profile-box col-sm-5">
+                                        <img decoding="async" src="{% static  './images/testimonial/testimonial-1.png'  %}" class="img-fluid">
+                                    </div>
+                                    <div class="card  col-sm-7">
+                                        <div class="desc-box">
+                                            <p class="fst-italic">"Amazing variety and quality! The organic fruits and dals are top-notch. Highly recommend this store!".</p>
+                                            <div class="my-4">
+                                                <h4>Navneet Bisht</h4>
+                                                <p class="m-0 text-white">Happy Customers</p>
+                                            </div>
+                                            <img decoding="async" src="{% static  './images/testimonial/qoutes.svg'  %}" class="float-end">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-sm-flex row">
+                                    <div class="profile-box col-sm-5">
+                                        <img decoding="async" src="{% static  './images/testimonial/testimonial-1.png'  %}" class="img-fluid">
+                                    </div>
+                                    <div class="card  col-sm-7">
+                                        <div class="desc-box">
+                                            <p class="fst-italic">"Fantastic service and super fresh products. The organic juices are a hit in my home!"</p>
+                                            <div class="my-4">
+                                                <h4>Prashant Mangoli</h4>
+                                                <p class="m-0 text-white">Happy Customers</p>
+                                            </div>
+                                            <img decoding="async" src="{% static  './images/testimonial/qoutes.svg'  %}" class="float-end">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+    </section>
+    <!--testimonial Section Exit -->
+
+    <!-- Gallery Section Start-->
+    <section class="gallery_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center pb-5">
+                    <h2 class="section-title">Our Gallery</h2>
+                    <p class="section-subtitle text-success">This our all uttrakhand organic items pictures</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="{% static  'images/gallery/g-1.jpg'  %}" data-lightbox="image" data-title="Lemon">
+                        <img decoding="async" src="{% static  'images/gallery/g-1.jpg'  %}" class="img-fluid rounded-3">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="{% static  'images/gallery/g-2.jpg'  %}" data-lightbox="image" data-title="Lemon">
+                        <img decoding="async" src="{% static  'images/gallery/g-2.jpg'  %}" class="img-fluid rounded-3">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="{% static  'images/gallery/g-3.jpg'  %}" data-lightbox="image" data-title="Lemon">
+                        <img decoding="async" src="{% static  'images/gallery/g-3.jpg'  %}" class="img-fluid rounded-3">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="{% static  'images/gallery/g-4.jpg'  %}" data-lightbox="image" data-title="Lemon">
+                        <img decoding="async" src="{% static  'images/gallery/g-4.jpg'  %}" class="img-fluid rounded-3">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="{% static  'images/gallery/g-5.jpg'  %}" data-lightbox="image" data-title="Lemon">
+                        <img decoding="async" src="{% static  'images/gallery/g-5.jpg'  %}" class="img-fluid rounded-3">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <a href="{% static  'images/gallery/g-6.jpg'  %}" data-lightbox="image" data-title="Lemon">
+                        <img decoding="async" src="{% static  'images/gallery/g-6.jpg'  %}" class="img-fluid rounded-3">
+                    </a>
+                </div>
+
+                <div class="col-sm-12 text-center mt-4">
+                    <a href="gallery.html" class="btn main-btn">View More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section Exit -->
+
+
+    
+
+{% endblock %}

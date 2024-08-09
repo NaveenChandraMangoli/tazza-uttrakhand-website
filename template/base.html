@@ -1,0 +1,166 @@
+{% load static %}    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tazza Uttrakhand Website</title>
+    <link rel="shortcut icon" href="favicon.ico" type="{% static  'image/x-icon'  %}" />
+
+    <!-- Lightbox Pupup -->
+    <link rel="stylesheet" href="{% static  'css/lightbox.css'  %}">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static  'css/style.css'  %}">
+    <link rel="stylesheet" href="{% static  'css/responsive-style.css'  %}">
+</head>
+
+<body>
+    <!-- Navbar Section Start -->
+    <header id="full_nav">
+        <div class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="/">
+                        <img decoding="async" src="{% static  './images/logo.png'  %}" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- <span class="navbar-toggler-icon"></span> -->
+                        <i class="fas fa-stream navbar-toggler-icon"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="main-nav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/"><i class="fa fa-home text-light me-1" aria-hidden="true"></i>Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about/"><i class="fa fa-address-book text-light me-1" aria-hidden="true"></i>About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/all_product/"><i class="fa fa-shopping-basket text-light me-1" aria-hidden="true"></i>Product</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/gallery/"><i class="fa fa-list-alt text-light me-1" aria-hidden="true"></i>Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact/"><i class="fa fa-phone-square  text-light me-1" aria-hidden="true"></i>Contact</a>
+                            </li>
+                        </ul>
+
+                        <!-- Registeration , login and logout condition -->
+
+                        {% if user.is_authenticated %}
+                        <form method="post" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button class="btn btn-outline-danger ms-3 fs-4 my-2" type="submit">Log-out</button>
+                        </form>
+                        {% else %}
+                            <a href=" {% url 'register' %}" class="btn btn-outline-primary fs-4">Register</a>
+                            <a href=" {% url 'login' %}" class="btn btn-outline-primary ms-3 fs-4">Log-in</a>
+                        {% endif %}
+                        
+                        <div class="header_right">
+                            <div class="text-lg-end">
+                                <span>Call Us!</span>
+                                <span class="phone_no ms-3">+91 888-2970-612</span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar Section Exit -->
+
+    {% block content %}
+
+
+
+    {% endblock %}
+
+    <!-- Footer section Start-->
+    <section class="footer_wrapper mt-3 mt-md-0">
+        <div class="container px-5 px-lg-0">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Tazza Uttrakhand Website</h5>
+                    <p class="mb-4 ps-0 company_details">"Experience the Freshness and Flavor of Uttarakhand's Organic Produce"</p>
+                    <div class="contact-info">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-home me-3"></i> A1 Block, Amrit Vihar, Burari, Delhi</a></li>
+                            <li><a href="#"><i class="fa fa-phone me-3"></i>+91 888-2970-612</a></li>
+                            <li><a href="#"><i class="fa fa-envelope me-3"></i>naveen88cm@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Customer Support</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/contact/">Privacy Policy</a></li>
+                        <li><a href="/contact/">Product Returns</a></li>
+                        <li><a href="/contact/">Wholesale Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About us</a></li>
+                        <li><a href="/all_product/">Product</a></li>
+                        <li><a href="/gallery/">Gallery</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+                    <h5>Offers</h5>
+                    <div class="form-group mb-4">
+                        <input type="email" class="form-control bg-transparent" placeholder="Enter Your Email Here">
+                        <button type="submit" class="btn main-btn">Subscribe</button>
+                    </div>
+                    <h5>Stay Connected</h5>
+                    <ul class="social-network d-flex align-items-center p-0">
+                        <li><a href="https://www.facebook.com/share/oKpzTmt5FDCYCJbz/?mibextid=qi2Omg/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/MangoliNaveen?t=6dvcjF820QZaZpTqPSOjwA&s=09"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/naveen-mangoli-34115a314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://github.com/NaveenChandraMangoli"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright-section">
+            <p> Tazza Uttarakhand Website Created By <a href="https://nikushatma.github.io/naveen-mangoli-portfolio-github.io/">© Naveen Chandra Mangoli.</a></p>
+        </div>
+    </section>
+    <!-- Footer Section Exit  -->
+
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Lightbox Pupup -->
+    <script src="{% static  'js/lightbox.js'  %}"></script>
+
+    <!-- Bootstrap 5 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static  'js/main.js'  %}"></script>
+</body>
+
+</html>

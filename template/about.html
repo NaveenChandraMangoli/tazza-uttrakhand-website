@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+    {% load static %} 
+
+    <!--About Us Page-->
+
+
+    <!-- banner Section start -->
+    <section class="banner_section">
+        <div class="container">
+            <div class="banner-content">
+                <h1>About Us</h1>
+            </div>
+        </div>
+    </section>
+    <!-- banner section exit -->
+
+    <!--About Section start -->
+    <section class="about_section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center pb-5">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="section-subtitle">Thi is one of the unique products which is an excellent thirst beverage and provides relief in the strong summer season.</p>
+                </div>
+            </div>
+            <div class="row align-items-center py-5">
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="me-lg-5">
+                        <img decoding="async" src="{% static  './images/about/about-img_uk.jpg'  %}" alt="about" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="about-content">
+                        <div class="about-details">
+                            <p>Welcome to Tazza Uttarakhand Store, your one-stop shop for the freshest and finest organic produce from the heart of Uttarakhand. We take immense pride in offering a wide range of vegetables, fruits, dals, and juices, all sourced directly from local farmers who are committed to sustainable and eco-friendly farming practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center py-5">
+                <div class="col-lg-6 col-12 order-2 order-lg-1 mb-4 ">
+                    <div class="about-content">
+                        <div class="about-details">   
+                            <p>Our mission is to bring you the best of Uttarakhand's natural bounty while supporting the local farming community. We believe in the power of organic produce to enhance your health and well-being, and we are dedicated to providing you with products that are as fresh and nutritious as they are delicious.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 order-1 order-lg-2 mb-4">
+                    <div class="me-lg-5">
+                        <img decoding="async" src="{% static  './images/about/about-img_uk1.jpg'  %}" alt="about" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center pb-5">
+                    <h2 class="section-title">Our Team </h2>
+                </div>
+            </div>
+            <div class="row align-items-center py-5">
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="me-lg-5">
+                        <img decoding="async" src="{% static  './images/about/about-img-owner.png'  %}" alt="about" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="about-content">
+                        <div class="about-details">
+                            <p>As the owner of this unique marketplace, I am <b class="text-success">Deepak Rikhari</b>, am thrilled to share with you the best organic produce that Uttarakhand has to offer. Growing up in this beautiful region, I have always been passionate about sustainable living and supporting our local farmers. Our mission is to bring fresh, healthy, and organic products straight from the farm to your table.</p>
+                            <p>Thank you for being a part of our journey. We are here to provide you with the freshest and most nutritious produce, and we hope you enjoy the fruits of our labor as much as we enjoy bringing them to you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center py-5">
+                <div class="col-lg-6 col-12 order-2 order-lg-1 mb-4 ">
+                    <div class="about-content">
+                        <div class="about-details">   
+                            <p>As the developer of this website, I am <b class="text-success">Naveen Chandra Mangoli</b>, am excited to bring you a platform that bridges the gap between you and the fresh, organic produce of Uttarakhand. Collaborating with <b class="text-success">Deepak Rikhari</b>, I have dedicated my skills and expertise to create a user-friendly and engaging online store that showcases the best of our region's bounty.</p>
+                            <p>Our aim is to provide you with a seamless shopping experience, making it easy for you to access the nutritious and organic products straight from Uttarakhand's farmers. Every element of this website is designed with you in mind, ensuring that you can explore, select, and enjoy the best produce without any hassle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 order-1 order-lg-2 mb-4">
+                    <div class="me-lg-5">
+                        <img decoding="async" src="{% static  './images/about/about-img-dev.png'  %}" alt="about" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About Section Exit -->
+
+{% endblock %}

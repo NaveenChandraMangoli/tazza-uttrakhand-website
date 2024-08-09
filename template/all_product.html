@@ -1,0 +1,84 @@
+<!--Product Page Design-->
+
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+    {% load static %} 
+
+
+    <!-- banner Section start -->
+    <section class="banner_section">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Product</h1>
+            </div>
+        </div>
+    </section>
+    <!-- banner section exit -->
+
+    <!--Product Section start -->
+    
+    <section class="product_section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center pb-5">
+                    <h2 class="section-title">Our Best Seller Product</h2>
+                    <p class="section-subtitle text-success">Click to view the full detail of product</p>
+                </div>
+            </div>
+
+
+            <div class="row mb-4 justify-content-center">
+                <div  class="col-4">
+                    <form method="get" class=" d-flex">
+                        <input class="form-control me-2" type="search" name="search_item" placeholder="Search product items....." aria-label="Search">
+                        <input class="btn btn-outline-success fs-3" type="submit" value="Search" />
+                    </form>
+                </div>
+            </div>
+            
+
+            <div class="row mx-0">
+
+                {% for n in Addproducts %}
+
+                    <div class="col-6 col-lg-3 mb-5">
+                        <div class="card product-card">
+                            <div class="product-img">
+                                <img decoding="async" src="/media/{{n.image}}" class="img-fluid" />
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p><b>{{n.product_name}}</b></p>
+                                <span>Rs. {{n.price}}</span>
+                            </div>
+                            <div class="product-detail">
+                                <a href="/product/{{n.id}}" class="btn main-btn"><i class="fa fa-eye text-dark me-1" aria-hidden="true"></i>View</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+
+                    <!--empty is work as a else when if condition is false then print empty -->
+
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 text-center pb-5">
+                                <h3 class="section-title text-danger">No Product Found</h3>
+                                <p class="section-subtitle text-success">Soory this product not present search another product again</p>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+
+    <!--Product Section Exit -->
+
+{% endblock %}
